@@ -241,7 +241,7 @@ function inspect() {
 	void firebug;*/
 	var script = document.createElement('script'); 
 	script.src="https://cdn.jsdelivr.net/npm/eruda"; 
-	ACTIVE_DOCUMENT().body.append(script)(function() {
+	ACTIVE_DOCUMENT().body.appendChild(script)(function() {
 		if(ACTIVE_WINDOW().eruda.version) {
 			ACTIVE_WINDOW().eruda.init();
 		} else {
