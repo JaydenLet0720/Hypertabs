@@ -228,6 +228,7 @@ function openMenu(...x) {
 	else elems.forEach((elm) => hideId(elm.id));
 }
 function inspect() {
+	/*
 	let firebug = document.createElement('script');
 	firebug.setAttribute('src', '/fbl/firebug-lite-debug.js');
 	ACTIVE_DOCUMENT().body.appendChild(firebug)(function () {
@@ -237,7 +238,10 @@ function inspect() {
 			setTimeout(arguments.callee);
 		}
 	})();
-	void firebug;
+	void firebug;*/
+	var script = document.createElement('script'); 
+	script.src="https://cdn.jsdelivr.net/npm/eruda"; 
+	document.body.append(script); script.onload = function () { eruda.init(); }
 }
 
 function opencity(frame) {
