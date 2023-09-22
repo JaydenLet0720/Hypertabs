@@ -241,14 +241,7 @@ function inspect() {
 	void firebug;*/
 	var script = document.createElement('script'); 
 	script.src="https://cdn.jsdelivr.net/npm/eruda"; 
-	ACTIVE_DOCUMENT().body.appendChild(script)(function() {
-		if(ACTIVE_WINDOW().eruda.version) {
-			ACTIVE_WINDOW().eruda.init();
-		} else {
-			setTimeout(arguments.callee);
-		}
-	}(); 
-	//script.onload = function () { eruda.init(); }
+	script.onload = function () { ACTIVE_WINDOW.eruda.init(); }
 }
 
 function opencity(frame) {
